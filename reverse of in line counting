@@ -1,0 +1,8 @@
+f = open("data.txt", "r")
+
+lines = f.readlines()
+
+for line in lines:
+    print(line.strip()[::-1])
+
+f.close()
