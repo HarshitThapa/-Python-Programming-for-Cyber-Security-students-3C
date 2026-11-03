@@ -1,0 +1,17 @@
+from datetime import datetime
+
+name = input("Enter your name: ")
+dob = input("Enter your DOB (DD-MM-YYYY): ")
+phone = input("Enter your phone number: ")
+
+date = datetime.strptime(dob, "%d-%m-%Y")
+
+if date.date() <= datetime.today().date():
+    print("Valid Date of Birth")
+else:
+    print("Invalid Date of Birth")
+
+if phone.isdigit() and len(phone) == 10:
+    print("Valid Phone Number")
+else:
+    print("Invalid Phone Number")
